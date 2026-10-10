@@ -1,6 +1,8 @@
 package org.project.rabbitmqapp.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -8,7 +10,9 @@ import java.time.LocalDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Message {
+    @Id
     private String id;
     private String type;
     private String recipient;
